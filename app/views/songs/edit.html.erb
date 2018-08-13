@@ -1,0 +1,13 @@
+<h1>Edit Song</h1>
+<% if @song.errors.any? %>
+<div id="error_explanation">
+  The following errors were found:
+  <ol><%= @song.errors.full_messages.each do |message| %>
+    <li><%= message %> </li>
+    <% end %>
+  </ol>
+</div>
+<% end %>
+<%= render 'form' %>
+
+<%= link_to 'Back', songs_path %>
